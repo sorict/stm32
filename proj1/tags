@@ -1,0 +1,109 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/tin/stm32/proj1/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+.bss	stm32_ls.ld	/^  .bss :$/;"	S
+.data	stm32_ls.ld	/^  .data :$/;"	S
+.text	stm32_ls.ld	/^  .text :$/;"	S
+AHBENR	gpio.h	/^  volatile uint32_t AHBENR;$/;"	m	struct:rcc	typeref:typename:volatile uint32_t
+APB1ENR	gpio.h	/^  volatile uint32_t APB1ENR;$/;"	m	struct:rcc	typeref:typename:volatile uint32_t
+APB1RSTR	gpio.h	/^  volatile uint32_t APB1RSTR;$/;"	m	struct:rcc	typeref:typename:volatile uint32_t
+APB2ENR	gpio.h	/^  volatile uint32_t APB2ENR;$/;"	m	struct:rcc	typeref:typename:volatile uint32_t
+APB2RSRT	gpio.h	/^  volatile uint32_t APB2RSRT;$/;"	m	struct:rcc	typeref:typename:volatile uint32_t
+BDCR	gpio.h	/^  volatile uint32_t BDCR;$/;"	m	struct:rcc	typeref:typename:volatile uint32_t
+BRR	gpio.h	/^  volatile uint32_t BRR;$/;"	m	struct:stm_gpio	typeref:typename:volatile uint32_t
+BRR	uart.h	/^	volatile uint32_t BRR;$/;"	m	struct:stm_uart	typeref:typename:volatile uint32_t
+BSRR	gpio.h	/^  volatile uint32_t BSRR;$/;"	m	struct:stm_gpio	typeref:typename:volatile uint32_t
+CALIB	systick.h	/^	volatile uint32_t CALIB;$/;"	m	struct:systick	typeref:typename:volatile uint32_t
+CC	Makefile	/^CC=arm-none-eabi-gcc$/;"	m
+CFGR	gpio.h	/^  volatile uint32_t CFGR;$/;"	m	struct:rcc	typeref:typename:volatile uint32_t
+CFLAGS	Makefile	/^CFLAGS= -c -mcpu=$(MACH) -mthumb -std=gnu11 -Wall -g -O0$/;"	m
+CIR	gpio.h	/^  volatile uint32_t CIR;$/;"	m	struct:rcc	typeref:typename:volatile uint32_t
+CR	gpio.h	/^  volatile uint32_t CR;$/;"	m	struct:rcc	typeref:typename:volatile uint32_t
+CR1	uart.h	/^	volatile uint32_t CR1;$/;"	m	struct:stm_uart	typeref:typename:volatile uint32_t
+CR2	uart.h	/^	volatile uint32_t CR2;$/;"	m	struct:stm_uart	typeref:typename:volatile uint32_t
+CR3	uart.h	/^	volatile uint32_t CR3;$/;"	m	struct:stm_uart	typeref:typename:volatile uint32_t
+CRH	gpio.h	/^  volatile uint32_t CRH; $/;"	m	struct:stm_gpio	typeref:typename:volatile uint32_t
+CRL	gpio.h	/^  volatile uint32_t CRL;$/;"	m	struct:stm_gpio	typeref:typename:volatile uint32_t
+CSR	gpio.h	/^  volatile uint32_t CSR;$/;"	m	struct:rcc	typeref:typename:volatile uint32_t
+CTRL	systick.h	/^	volatile uint32_t CTRL;$/;"	m	struct:systick	typeref:typename:volatile uint32_t
+DR	uart.h	/^	volatile uint32_t DR;$/;"	m	struct:stm_uart	typeref:typename:volatile uint32_t
+Default_Handler	stm32_startup.c	/^void Default_Handler(void) {$/;"	f	typeref:typename:void
+FREQ	uart.h	/^#define FREQ /;"	d
+GPIO_AF	gpio.h	/^#define GPIO_AF /;"	d
+GPIO_ANALOG	gpio.h	/^#define GPIO_ANALOG /;"	d
+GPIO_H	gpio.h	/^#define GPIO_H$/;"	d
+GPIO_INPUT	gpio.h	/^#define GPIO_INPUT /;"	d
+GPIO_OUTPUT	gpio.h	/^#define GPIO_OUTPUT /;"	d
+GTPR	uart.h	/^	volatile uint32_t GTPR;$/;"	m	struct:stm_uart	typeref:typename:volatile uint32_t
+IDR	gpio.h	/^  volatile uint32_t IDR;$/;"	m	struct:stm_gpio	typeref:typename:volatile uint32_t
+LCKR	gpio.h	/^  volatile uint32_t LCKR; $/;"	m	struct:stm_gpio	typeref:typename:volatile uint32_t
+LDFLAGS	Makefile	/^LDFLAGS= -T stm32_ls.ld -nostdlib -Wl,-Map=blinky.map$/;"	m
+LOAD	systick.h	/^	volatile uint32_t LOAD;$/;"	m	struct:systick	typeref:typename:volatile uint32_t
+MACH	Makefile	/^MACH=cortex-m3$/;"	m
+OBJCOPY	Makefile	/^OBJCOPY=arm-none-eabi-objcopy$/;"	m
+ODR	gpio.h	/^  volatile uint32_t ODR;$/;"	m	struct:stm_gpio	typeref:typename:volatile uint32_t
+Reset_Handler	stm32_startup.c	/^void Reset_Handler(void) {$/;"	f	typeref:typename:void
+SR	uart.h	/^	volatile uint32_t SR;$/;"	m	struct:stm_uart	typeref:typename:volatile uint32_t
+SRAM_END	stm32_startup.c	/^#define SRAM_END /;"	d	file:
+SRAM_SIZE	stm32_startup.c	/^#define SRAM_SIZE /;"	d	file:
+SRAM_START	stm32_startup.c	/^#define SRAM_START /;"	d	file:
+STACK_START	stm32_startup.c	/^#define STACK_START /;"	d	file:
+SysTick_Handler	blink.c	/^void SysTick_Handler(void) {$/;"	f	typeref:typename:void
+VAL	systick.h	/^	volatile uint32_t VAL;$/;"	m	struct:systick	typeref:typename:volatile uint32_t
+_UART_H	uart.h	/^#define _UART_H$/;"	d
+__bss_end__	stm32_ls.ld	/^    __bss_end__ = _ebss;$/;"	s	section:.bss
+__bss_start__	stm32_ls.ld	/^    __bss_start__ = _sbss;$/;"	s	section:.bss
+__end__	stm32_ls.ld	/^    __end__ = .;$/;"	s	section:.bss
+_ebss	stm32_ls.ld	/^    _ebss = .;$/;"	s	section:.bss
+_edata	stm32_ls.ld	/^    _edata = .;$/;"	s	section:.data
+_etext	stm32_ls.ld	/^    _etext = .;$/;"	s	section:.text
+_sbss	stm32_ls.ld	/^    _sbss = .;$/;"	s	section:.bss
+_sdata	stm32_ls.ld	/^    _sdata = .;$/;"	s	section:.data
+all	Makefile	/^all: blinky.bin$/;"	t
+blinky.bin	Makefile	/^blinky.bin: blinky.elf$/;"	t
+blinky.elf	Makefile	/^blinky.elf: blink.o stm32_startup.o $/;"	t
+clean	Makefile	/^clean:$/;"	t
+debughost	Makefile	/^debughost:$/;"	t
+delay	blink.c	/^void delay(unsigned time) {$/;"	f	typeref:typename:void
+end	stm32_ls.ld	/^    end = .;$/;"	s	section:.bss
+flash	Makefile	/^flash: all$/;"	t
+gdb	Makefile	/^gdb: blinky.elf$/;"	t
+gpio_clk_init	gpio.h	/^static inline void gpio_clk_init(struct rcc *rcc_addr, uint16_t pin) {$/;"	f	typeref:typename:void
+gpio_set_mode	gpio.h	/^static inline void gpio_set_mode(struct stm_gpio *gpio, uint8_t pin, uint8_t mode, uint8_t type)/;"	f	typeref:typename:void
+gpio_set_value	gpio.h	/^static inline void gpio_set_value(struct stm_gpio *gpio, uint16_t pin, bool level){$/;"	f	typeref:typename:void
+gpioa	gpio.h	/^struct stm_gpio *gpioa = (struct stm_gpio*)(0x40010800);$/;"	v	typeref:struct:stm_gpio *
+gpiob	gpio.h	/^struct stm_gpio *gpiob = (struct stm_gpio*)(0x40010C00);$/;"	v	typeref:struct:stm_gpio *
+gpioc	gpio.h	/^struct stm_gpio *gpioc = (struct stm_gpio*)(0x40011000);$/;"	v	typeref:struct:stm_gpio *
+gpiod	gpio.h	/^struct stm_gpio *gpiod = (struct stm_gpio*)(0x40011400);$/;"	v	typeref:struct:stm_gpio *
+gpioe	gpio.h	/^struct stm_gpio *gpioe = (struct stm_gpio*)(0x40011800);$/;"	v	typeref:struct:stm_gpio *
+gpiof	gpio.h	/^struct stm_gpio *gpiof = (struct stm_gpio*)(0x40011C00);$/;"	v	typeref:struct:stm_gpio *
+gpiog	gpio.h	/^struct stm_gpio *gpiog = (struct stm_gpio*)(0x40012000);$/;"	v	typeref:struct:stm_gpio *
+main	blink.c	/^int main(){$/;"	f	typeref:typename:int
+rcc	gpio.h	/^struct rcc {$/;"	s
+rcc_reg	gpio.h	/^struct rcc *rcc_reg = (struct rcc*)(0x40021000);$/;"	v	typeref:struct:rcc *
+reset	Makefile	/^reset:$/;"	t
+setup	blink.c	/^void setup(){$/;"	f	typeref:typename:void
+spin	gpio.h	/^static inline void spin(volatile uint32_t count) {$/;"	f	typeref:typename:void
+stm_gpio	gpio.h	/^struct stm_gpio {$/;"	s
+stm_uart	uart.h	/^struct stm_uart {$/;"	s
+systick	systick.h	/^struct systick {$/;"	s
+systick_init	systick.h	/^static inline void systick_init(uint32_t ticks) {$/;"	f	typeref:typename:void
+tick_reg	systick.h	/^struct systick *tick_reg = (struct systick *)0xE000E010;$/;"	v	typeref:struct:systick *
+ticks	blink.c	/^static volatile uint32_t ticks;$/;"	v	typeref:typename:volatile uint32_t	file:
+uart1	uart.h	/^struct stm_uart *uart1 = (struct stm_uart *)(0x40013800);$/;"	v	typeref:struct:stm_uart *
+uart2	uart.h	/^struct stm_uart *uart2 = (struct stm_uart *)(0x40004400);$/;"	v	typeref:struct:stm_uart *
+uart3	uart.h	/^struct stm_uart *uart3 = (struct stm_uart *)(0x40004800);$/;"	v	typeref:struct:stm_uart *
+uart4	uart.h	/^struct stm_uart *uart4 = (struct stm_uart *)(0x40004C00);$/;"	v	typeref:struct:stm_uart *
+uart5	uart.h	/^struct stm_uart *uart5 = (struct stm_uart *)(0x40005000);$/;"	v	typeref:struct:stm_uart *
+uart_init	uart.h	/^static inline void uart_init(struct stm_uart *uart, uint32_t baud_rate) {$/;"	f	typeref:typename:void
+uart_write_buf	uart.h	/^static inline void uart_write_buf(struct stm_uart *uart, char *buf, size_t len) {$/;"	f	typeref:typename:void
+uart_write_byte	uart.h	/^static inline void uart_write_byte(struct stm_uart *uart, uint8_t byte) {$/;"	f	typeref:typename:void
+vectors	stm32_startup.c	/^uint32_t vectors[] __attribute__((section(".isr_vector")))   = {$/;"	v	typeref:typename:uint32_t[]

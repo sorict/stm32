@@ -1,0 +1,205 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000008000000 0x0000000000010000 xr
+SRAM             0x0000000020000000 0x0000000000005000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD blink.o
+LOAD stm32_startup.o
+
+.text           0x0000000008000000      0x5d4
+ *(.isr_vector)
+ .isr_vector    0x0000000008000000      0x130 stm32_startup.o
+                0x0000000008000000                vectors
+ *(.text)
+ .text          0x0000000008000130      0x410 blink.o
+                0x0000000008000454                setup
+                0x00000000080004a4                SysTick_Handler
+                0x00000000080004c0                delay
+                0x00000000080004f0                main
+ .text          0x0000000008000540       0x8c stm32_startup.o
+                0x0000000008000540                RTC_Alarm_IRQHandler
+                0x0000000008000540                EXTI2_IRQHandler
+                0x0000000008000540                TIM8_TRG_COM_IRQHandler
+                0x0000000008000540                TIM8_CC_IRQHandler
+                0x0000000008000540                DebugMon_Handler
+                0x0000000008000540                TIM1_CC_IRQHandler
+                0x0000000008000540                HardFault_Handler
+                0x0000000008000540                TIM6_IRQHandler
+                0x0000000008000540                PVD_IRQHandler
+                0x0000000008000540                SDIO_IRQHandler
+                0x0000000008000540                TAMP_STAMP_IRQHandler
+                0x0000000008000540                PendSV_Handler
+                0x0000000008000540                NMI_Handler
+                0x0000000008000540                EXTI3_IRQHandler
+                0x0000000008000540                USB_HP_CAN_TX_IRQHandler
+                0x0000000008000540                EXTI0_IRQHandler
+                0x0000000008000540                I2C2_EV_IRQHandler
+                0x0000000008000540                UsageFault_Handler
+                0x0000000008000540                SPI1_IRQHandler
+                0x0000000008000540                CAN_SCE_IRQHandler
+                0x0000000008000540                TIM8_UP_IRQHandler
+                0x0000000008000540                DMA2_Channel2_IRQHandler
+                0x0000000008000540                DMA1_Channel4_IRQHandler
+                0x0000000008000540                USART3_IRQHandler
+                0x0000000008000540                DMA1_Channel7_IRQHandler
+                0x0000000008000540                UART5_IRQHandler
+                0x0000000008000540                ADC3_IRQHandler
+                0x0000000008000540                TIM4_IRQHandler
+                0x0000000008000540                CAN_RX1_IRQHandler
+                0x0000000008000540                DMA2_Channel1_IRQHandler
+                0x0000000008000540                USB_Wakeup_IRQHandler
+                0x0000000008000540                I2C1_EV_IRQHandler
+                0x0000000008000540                DMA1_Channel6_IRQHandler
+                0x0000000008000540                UART4_IRQHandler
+                0x0000000008000540                TIM3_IRQHandler
+                0x0000000008000540                RCC_IRQHandler
+                0x0000000008000540                TIM1_TRG_COM_IRQHandler
+                0x0000000008000540                DMA1_Channel1_IRQHandler
+                0x0000000008000540                Default_Handler
+                0x0000000008000540                EXTI15_10_IRQHandler
+                0x0000000008000540                ADC_IRQHandler
+                0x0000000008000540                TIM7_IRQHandler
+                0x0000000008000540                TIM5_IRQHandler
+                0x0000000008000540                EXTI9_5_IRQHandler
+                0x0000000008000540                RTC_WKUP_IRQHandler
+                0x0000000008000540                SPI2_IRQHandler
+                0x0000000008000540                USB_LP_CAN_RX0_IRQHandler
+                0x0000000008000540                MemManage_Handler
+                0x0000000008000540                SVC_Handler
+                0x0000000008000540                DMA1_Channel5_IRQHandler
+                0x0000000008000540                EXTI4_IRQHandler
+                0x0000000008000540                DMA1_Channel3_IRQHandler
+                0x0000000008000540                FSMC_IRQHandler
+                0x0000000008000540                TIM1_UP_IRQHandler
+                0x0000000008000540                WWDG_IRQHandler
+                0x0000000008000540                TIM2_IRQHandler
+                0x0000000008000540                TIM1_BRK_IRQHandler
+                0x0000000008000540                EXTI1_IRQHandler
+                0x0000000008000540                DMA2_Channel4_5_IRQHandler
+                0x0000000008000540                USART2_IRQHandler
+                0x0000000008000540                I2C2_ER_IRQHandler
+                0x0000000008000540                DMA1_Channel2_IRQHandler
+                0x0000000008000540                TIM8_BRK_IRQHandler
+                0x0000000008000540                BusFault_Handler
+                0x0000000008000540                USART1_IRQHandler
+                0x0000000008000540                SPI3_IRQHandler
+                0x0000000008000540                I2C1_ER_IRQHandler
+                0x0000000008000540                DMA2_Channel3_IRQHandler
+                0x0000000008000546                Reset_Handler
+ *(.text.*)
+ *(.init)
+ *(.fini)
+ *(.rodata)
+ .rodata        0x00000000080005cc        0x6 blink.o
+ *(.rodata.*)
+                0x00000000080005d4                . = ALIGN (0x4)
+ *fill*         0x00000000080005d2        0x2 
+                0x00000000080005d4                _etext = .
+                0x00000000080005d4                _la_data = LOADADDR (.data)
+
+.glue_7         0x00000000080005d4        0x0
+ .glue_7        0x00000000080005d4        0x0 linker stubs
+
+.glue_7t        0x00000000080005d4        0x0
+ .glue_7t       0x00000000080005d4        0x0 linker stubs
+
+.vfp11_veneer   0x00000000080005d4        0x0
+ .vfp11_veneer  0x00000000080005d4        0x0 linker stubs
+
+.v4_bx          0x00000000080005d4        0x0
+ .v4_bx         0x00000000080005d4        0x0 linker stubs
+
+.iplt           0x00000000080005d4        0x0
+ .iplt          0x00000000080005d4        0x0 blink.o
+
+.rel.dyn        0x00000000080005d4        0x0
+ .rel.iplt      0x00000000080005d4        0x0 blink.o
+
+.data           0x0000000020000000       0x3c load address 0x00000000080005d4
+                0x0000000020000000                _sdata = .
+ *(.data)
+ .data          0x0000000020000000       0x3c blink.o
+                0x0000000020000000                gpioa
+                0x0000000020000004                gpiob
+                0x0000000020000008                gpioc
+                0x000000002000000c                gpiod
+                0x0000000020000010                gpioe
+                0x0000000020000014                gpiof
+                0x0000000020000018                gpiog
+                0x000000002000001c                afio
+                0x0000000020000020                rcc_reg
+                0x0000000020000024                tick_reg
+                0x0000000020000028                uart1
+                0x000000002000002c                uart2
+                0x0000000020000030                uart3
+                0x0000000020000034                uart4
+                0x0000000020000038                uart5
+ .data          0x000000002000003c        0x0 stm32_startup.o
+ *(.data.*)
+                0x000000002000003c                . = ALIGN (0x4)
+                0x000000002000003c                _edata = .
+
+.igot.plt       0x000000002000003c        0x0 load address 0x0000000008000610
+ .igot.plt      0x000000002000003c        0x0 blink.o
+
+.bss            0x000000002000003c        0x4 load address 0x0000000008000610
+                0x000000002000003c                _sbss = .
+                0x000000002000003c                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x000000002000003c        0x4 blink.o
+ .bss           0x0000000020000040        0x0 stm32_startup.o
+ *(.bss.*)
+ *(COMMON)
+                0x0000000020000040                . = ALIGN (0x4)
+                0x0000000020000040                _ebss = .
+                0x0000000020000040                __bss_end__ = _ebss
+                0x0000000020000040                . = ALIGN (0x4)
+                0x0000000020000040                end = .
+                0x0000000020000040                __end__ = .
+OUTPUT(blink.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x0000000000000000      0x7a0
+ .debug_info    0x0000000000000000      0x612 blink.o
+ .debug_info    0x0000000000000612      0x18e stm32_startup.o
+
+.debug_abbrev   0x0000000000000000      0x294
+ .debug_abbrev  0x0000000000000000      0x1ae blink.o
+ .debug_abbrev  0x00000000000001ae       0xe6 stm32_startup.o
+
+.debug_aranges  0x0000000000000000       0x40
+ .debug_aranges
+                0x0000000000000000       0x20 blink.o
+ .debug_aranges
+                0x0000000000000020       0x20 stm32_startup.o
+
+.debug_line     0x0000000000000000      0x34f
+ .debug_line    0x0000000000000000      0x260 blink.o
+ .debug_line    0x0000000000000260       0xef stm32_startup.o
+
+.debug_str      0x0000000000000000      0x34e
+ .debug_str     0x0000000000000000      0x2c4 blink.o
+                                        0x316 (size before relaxing)
+ .debug_str     0x00000000000002c4       0x8a stm32_startup.o
+                                        0x1a1 (size before relaxing)
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 blink.o
+                                         0x34 (size before relaxing)
+ .comment       0x0000000000000033       0x34 stm32_startup.o
+
+.ARM.attributes
+                0x0000000000000000       0x2d
+ .ARM.attributes
+                0x0000000000000000       0x2d blink.o
+ .ARM.attributes
+                0x000000000000002d       0x2d stm32_startup.o
+
+.debug_frame    0x0000000000000000      0x20c
+ .debug_frame   0x0000000000000000      0x1c0 blink.o
+ .debug_frame   0x00000000000001c0       0x4c stm32_startup.o
